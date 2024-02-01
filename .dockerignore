@@ -1,0 +1,6 @@
+Dockerfile
+.dockerignore
+node_modules
+__tests__
+jest.config.ts
+tsconfig.json
