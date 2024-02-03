@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node ./dist/app.js",
     "dev": "npx nodemon",
-    "build": "rimraf ./dist && tsc -p .",
-    "test": "jest --config jest.config.ts ./__tests__"
+    "build": "rimraf ./dist && tsc -p ."
   },
   "keywords": [],
   "author": "",
