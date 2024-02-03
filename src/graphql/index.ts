@@ -25,7 +25,7 @@ export const startGrapqlServer = async (app: Application) => {
     typeDefs,
     resolvers: { Date: dateScalar, ...resolvers },
     plugins: [
-      // Install a landing page plugin based on NODE_ENV
+      ApolloServerPluginDrainHttpServer({ httpServer }),
       ApolloServerPluginLandingPageLocalDefault({ footer: false }),
     ],
   });
