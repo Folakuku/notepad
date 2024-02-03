@@ -3,7 +3,7 @@ import request from "supertest";
 import { app } from "../src/app";
 
 describe("GraphQL API Tests", () => {
-  let authToken: string;
+  let authToken;
   authToken =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJiNDdjZWY0NjA0YWY2MGRjNDdhYTEiLCJlbWFpbCI6InRlc3R1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcwNjc3NTk5NCwiZXhwIjoxNzA2OTQ4Nzk0fQ.AjkAC__5zmWR_PvZgyUV6L99_6hIcNpY1H-EmJHybjg";
 
