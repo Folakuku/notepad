@@ -3,7 +3,6 @@ import * as jwt from "jsonwebtoken";
 import { IUser } from "../interfaces/user.interface";
 import { UserModel } from "../models/user";
 import { EmptyResponse } from "../interfaces";
-import { GraphQLError } from "graphql";
 const secretKey = process.env.JWT_SECRET;
 
 export const capitalize = (word: string): string => {
@@ -33,20 +32,13 @@ export const signJwt = (payload: IUser): string => {
   );
 };
 
-export const decodeToken = async (
-  token: string
-): Promise<IUser | GraphQLError | null> => {
+export const decodeToken = async (token: string): Promise<IUser | null> => {
   const payload: any = jwt.verify(token, secretKey);
   const user = await UserModel.findById(payload._id);
   if (!user) {
-    return new GraphQLError(`AUTHORIZATION ERROR`, {
-      extensions: { code: "UNPROCESSABLE ENTITY" },
-    });
-  }
-  user.set("password", null);
-  if (!user) {
     return null;
   }
+  user.set("password", null);
   return user;
 };
 
