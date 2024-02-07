@@ -64,10 +64,7 @@ export const findMyNotes = async (filter: NoteFilter): Promise<IResponse> => {
 
   if (filter.titleFilter) {
     query.title = { $regex: filter.titleFilter, $options: "i" };
-    console.log("title");
   }
-  console.log(filter);
-  console.log(query);
   const notes = await NoteModel.find(query).populate({
     path: "user",
     select: "-password",
