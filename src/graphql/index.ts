@@ -28,6 +28,7 @@ export const startGrapqlServer = async (app: Application) => {
       ApolloServerPluginDrainHttpServer({ httpServer }),
       ApolloServerPluginLandingPageLocalDefault({ footer: false }),
     ],
+    introspection: true,
   });
   await server.start();
 
