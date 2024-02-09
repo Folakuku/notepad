@@ -3,10 +3,6 @@ import { app } from "../src/app";
 
 describe("GraphQL API Tests", () => {
   let authToken;
-  // authToken =
-  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWJiNDdjZWY0NjA0YWY2MGRjNDdhYTEiLCJlbWFpbCI6InRlc3R1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcwNzQ4NjQzNSwiZXhwIjoxNzA4MDkxMjM1fQ.Awnuvh4Z8gPRnfrzKWIzTGvQ5Q1vSifTxZj-BwtVcUo";
-  // authToken =
-  //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWM2MjNhZmNiZDRiZjY1YTVhMGYxNGEiLCJlbWFpbCI6InRlc3R1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcwNzQ4NDA4NSwiZXhwIjoxNzA4MDg4ODg1fQ.fz1rHziiJCYCM4BLzfbMPq4xqVRsW-HosGNWRSZwaUM";
 
   beforeAll(async () => {
     const response = await request(app)
