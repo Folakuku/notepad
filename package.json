@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node ./dist/app.js",
     "dev": "npx nodemon",
-    "build": "rimraf ./dist && tsc -p ."
+    "build": "rimraf ./dist && tsc -p .",
+    "test": "jest --config jest.config.js ./__tests__ --detectOpenHandles",
+    "tests": "ts-node __tests__/graphql.ts"
   },
   "keywords": [],
   "author": "",
