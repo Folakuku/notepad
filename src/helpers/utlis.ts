@@ -1,4 +1,4 @@
-import * as bcrypt from "bcrypt";
+import * as bcrypt from "bcryptjs";
 import * as jwt from "jsonwebtoken";
 import { IUser } from "../interfaces/user.interface";
 import { UserModel } from "../models/user";

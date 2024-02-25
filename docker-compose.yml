@@ -4,7 +4,6 @@ services:
   api:
     build:
       context: .
-      target: production
 
     ports:
-      - 4000:4000
+      - 8001:8001
